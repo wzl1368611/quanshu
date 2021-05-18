@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4cf46d32-f9e3-4411-afb1-f2e89d5ea9db" name="quanshu" url="http://192.168.18.158">
+        <fileTransfer rootFolder="/home/wzl/python/www/quanshu" accessType="SFTP" host="192.168.18.158" port="22" sshConfigId="37fb3abc-6f90-4eb2-ac5a-f654edc4a44d" sshConfig="root@192.168.18.158:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

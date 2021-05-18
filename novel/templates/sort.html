@@ -1,0 +1,138 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+<html>
+<head>
+<script src="{% static 'js/mm.js' %}" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.quanshuwang.com" />
+<meta http-equiv="mobile-agent" content="format=html5; url=http://m.quanshuwang.com" />
+<title>免费小说_免费小说阅读网_全书网</title>
+<meta name="keywords" content="免费小说,免费小说阅读网,全书网" />
+<meta name="description" content="免费小说阅读网,精彩免费小说阅读尽在www.quanshuwang.com，全书网提供全部免费小说,分类有玄幻小说,武侠小说,网游小说,都市言情小说,历史军事小说,包括首发小说最新章节免费阅读." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc">
+<meta name="robots" content="all">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script src="{%  static 'js/html5.js' %}"></script>
+<![endif]-->
+<script language="javascript" type="text/javascript"  src="{% static 'js/jquery-1.js' %}"></script>
+<script language="javascript" type="text/javascript"  src="{% static 'js/index.js' %}"></script>
+<script language="javascript" type="text/javascript"  src="{% static 'js/common.js' %}"></script>
+<script language="javascript" type="text/javascript"  src="{% static 'ku.js' %}"></script>
+<link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css">
+<link href="{%  static 'css/board.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div style="width: 1920px; height: 1923px; z-index: 5000; display:none;" id="mask"></div>
+<div id="wrapper">
+  <div class="shadow"></div>
+  <header id="global-head">
+    <div>
+      <nav class="site-navigation cf">
+	  <a class="home" href="http://www.quanshuwang.com">首页</a>
+	  <a href="/shuku/">书库榜单</a>
+	  <a href="http://m.quanshuwang.com">全书手机站</a>
+	  </nav>
+     <div class="hd-follow" style="width:400px;">
+	<div class="myhide"><a href="javascript:;" class="hides">浏览记录</a>
+		<div class="hideInfo">
+		<script type="text/javascript" src="{% static 'js/json2.js' %}"></script>
+		<script type="text/javascript" src="{%  static 'js/readshow.js' %}"></script>
+		<p>*提示：浏览记录仅放置最近浏览的10本书籍</p>
+		</div>
+	</div>
+        <span id="checklogin">
+			<script language="javascript" src="{% static 'js/denglu.js' %}"></script>
+		</span>
+		</div>
+    </div>
+    <p class="site-logo"><a href="http://www.quanshuwang.com" title="全书网"><img src="{% static 'images/logo-medium.jpg' %}" alt="全书网 - logo"></a></p>
+    <div class="site-search">
+       <form action="http://www.quanshuwang.com/modules/article/search.php" method="get" target="_blank">
+       <input name="searchkey" type="text" id="bdcsMain" onFocus="this.classname='over';if (value =='这是一个神奇的搜索'){value =''}" onBlur="this.classname='input'"  value="这是一个神奇的搜索" />
+        <span style="display:none;">
+        <select name="searchtype" id="select" class="searchtype">
+          <option value="articlename" selected="selected">文章名称</option>
+          <option value="author">文章作者</option>
+        </select>
+        </span>
+        <input type="image" name="searchbuttom" id="searchbuttom" src="{% static 'images/search.jpg' %}" />
+      </form>
+    </div>
+</header>
+  <div id="channel-header" class="clearfix">
+    <div class="channel-header-wrapper">
+      <div class="channel-logo"><a href="http://www.quanshuwang.com" title="全书网">全书网</a></div>
+      <nav class="channel-nav">
+        <ul class="channel-nav-list">
+  <li><a href="{% url 'sort' 1 1 %}">玄幻魔法</a></li>
+  <li><a href="{% url 'sort' 2 1 %}">武侠修真</a></li>
+  <li><a href="{% url 'sort' 3 1 %}">纯爱耽美</a></li>
+  <li><a href="{% url 'sort' 4 1 %}">都市言情</a></li>
+  <li><a href="{% url 'sort' 5 1 %}">职场校园</a></li>
+  <li><a href="{% url 'sort' 6 1 %}">穿越重生</a></li>
+  <li><a href="{% url 'sort' 7 1 %}">历史军事</a></li>
+  <li><a href="{% url 'sort' 8 1 %}">网游动漫</a></li>
+  <li><a href="{% url 'sort' 9 1 %}">恐怖灵异</a></li>
+  <li><a href="{% url 'sort' 10 1 %}">科幻小说</a></li>
+  <li><a href="{% url 'sort' 11 1 %}">美文名著</a></li>
+  <li><a href="{% url 'sort' 12 1 %}">安卓游戏</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+ <div id="container">
+   <div style="margin:1px 1px 6px 1px;text-align:center;"><script type="text/javascript">index1();</script></div>
+    <section class="section board-list board-list-collapse">
+      <div class="b-all-switch"><p class="l">热门推荐<span><em>如果发现本站有违禁小说，请马上<a style="color:#333;font-size:12px;margin:0 0 0 6px;padding-left:0;width:30px;font-weight:bload;" href="http://www.quanshuwang.com/newmessage.php?tosys=1&amp;title=%be%d9%b1%a8%ce%a5%bd%fb%d0%a1%cb%b5%a3%a1%a3%a1%a3%a1">举报</a>或者发送邮件(quanshunet@gmail.com)，营造和谐社会，人人有责。</em></span></p>
+		<div class="l mtl5"><script type="text/javascript" src="{% static 'js/bd.js' %}"></script></div>
+	  </div>
+      <ul class="b-all-content cf">
+    {% for novel in page_obj %}
+    <!--
+    <li><a target="_blank" href="1111111" title={{ novel.novelname|safe }} class="msgBorder"><img src="http://img.quanshuwang.com/image/9/9055/9055s.jpg" width="120" height="150"></a><img src="{% static 'images/only2.png' %}" class="topss png_bg"><a href="http://www.quanshuwang.com/book_9055.html" title="盗墓笔记" class="clearfix">盗墓笔记</a>类别：<a href="/list/9_1.html">恐怖灵异</a><br>作者：<a href="/modules/article/authorarticle.php?author=%C4%CF%C5%C9%C8%FD%CA%E5">南派三叔</a></li>
+    -->
+    <li><a target="_blank" href="{% url 'content' novel.novelid %} " title={{ novel.novelname|safe }} class="msgBorder"><img src="{{ novel.novelimg }}" width="120" height="150"></a><img src="{% if novel.state == '连载中' %} {% static 'images/only2.png'  %}{% else %}{% static 'images/only.png' %} {% endif %}" class="topss png_bg"><a href="{% url 'content' novel.novelid %}" title="盗墓笔记" class="clearfix">{{ novel.novelname }}</a>类别：<a href="{% url 'sort' novel.type 1 %}">{{ novel.sort }}</a><br>作者：<a href="#">{{ novel.author }}</a></li>
+
+    {% endfor %}
+      </ul>
+            <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+        <footer id="global-foot"> &#169;Copyright http://www.quanshuwang.com 全书网 2012, All rights reserved <br>
+	本站小说均由网友转载于网络，若转载中的书本侵犯了您的权益，请于本站管理员联系。<br>
+	本站提倡创建绿色网络文学环境，如果转载的书本中出现了淫秽，反动，低俗信息，请及时举报。<br>
+	Facebook: https://www.facebook.com/BL.Yaoi/<br>
+	举报邮箱：quanshunet@gmail.com<br>
+	联系地址：台南市北門路一段141號<br>
+  </footer>
+</div>
+<script type="text/javascript">duilian();</script>
+<script type="text/javascript">baidusearch();</script>
+</body>
+</html>
+
